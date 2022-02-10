@@ -131,6 +131,14 @@ const Product = () => {
           </Desc>
           <Price>$ 20</Price>
           <FilterContainer>
+          <Filter>
+              <FilterTitle>Size</FilterTitle>
+              <FilterSize>
+                <FilterSizeOption>MEN</FilterSizeOption>
+                <FilterSizeOption>WOMEN</FilterSizeOption>
+              </FilterSize>
+            </Filter>
+
             <Filter>
               <FilterTitle>Color</FilterTitle>
               <FilterColor color="black" />
@@ -147,6 +155,7 @@ const Product = () => {
                 <FilterSizeOption>XL</FilterSizeOption>
               </FilterSize>
             </Filter>
+
           </FilterContainer>
           <AddContainer>
             <AmountContainer>
@@ -154,7 +163,7 @@ const Product = () => {
               <Amount>1</Amount>
               <AddCircleOutlineIcon />
             </AmountContainer>
-            
+            <Button>ADD TO CART</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>
