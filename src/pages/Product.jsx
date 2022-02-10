@@ -154,7 +154,7 @@ const Product = () => {
               <Amount>1</Amount>
               <AddCircleOutlineIcon />
             </AmountContainer>
-            <Button>ADD TO CART</Button>
+            
           </AddContainer>
         </InfoContainer>
       </Wrapper>
