@@ -1,14 +1,14 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "https://i.ibb.co/cXFnLLV/3.png",
-      title: "SUMMER SALE",
+      img: "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw926c16be/67638786_007_main.jpg?sw=2000&sh=2000&sm=fit&sfrm=jpg",
+      title: "Winter SALE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "f5fafd",
     },
     {
       id: 2,
-      img: "https://i.ibb.co/DG69bQ4/2.png",
+      img: "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw6a125bce/80548458_800_main.jpg?sw=2000&sh=2000&sm=fit&sfrm=jpg",
       title: "AUTUMN COLLECTION",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "fcf1ed",

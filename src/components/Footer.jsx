@@ -1,12 +1,10 @@
-import {
-  Facebook,
-  Instagram,
-  MailOutline,
-  Phone,
-  Pinterest,
-  Room,
-  Twitter,
-} from "@material-ui/icons";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
+import PhoneIcon from '@mui/icons-material/Phone';
+import PinterestIcon from '@mui/icons-material/Pinterest';
+import RoomIcon from '@mui/icons-material/Room';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -45,7 +43,6 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
-  ${mobile({ display: "none" })}
 `;
 
 const Title = styled.h3`
@@ -85,7 +82,7 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>LAMA.</Logo>
+        <Logo>ECOM.</Logo>
         <Desc>
           There are many variations of passages of Lorem Ipsum available, but
           the majority have suffered alteration in some form, by injected
@@ -93,16 +90,16 @@ const Footer = () => {
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
-            <Facebook />
+            <FacebookIcon />
           </SocialIcon>
           <SocialIcon color="E4405F">
-            <Instagram />
+            <InstagramIcon />
           </SocialIcon>
           <SocialIcon color="55ACEE">
-            <Twitter />
+            <TwitterIcon />
           </SocialIcon>
           <SocialIcon color="E60023">
-            <Pinterest />
+            <PinterestIcon />
           </SocialIcon>
         </SocialContainer>
       </Left>
@@ -124,13 +121,13 @@ const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
+          <RoomIcon style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
         </ContactItem>
         <ContactItem>
-          <Phone style={{marginRight:"10px"}}/> +1 234 56 78
+          <PhoneIcon style={{marginRight:"10px"}}/> +1 234 56 78
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{marginRight:"10px"}} /> contact@lama.dev
+          <MailOutlineOutlinedIcon style={{marginRight:"10px"}} /> contact@ecom.dev
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>
