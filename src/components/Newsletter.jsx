@@ -2,8 +2,8 @@ import SendIcon from '@mui/icons-material/Send';
 import styled from "styled-components";
 
 const Container = styled.div`
-  height: 50vh;
-  background-color: black;
+  height: 45vh;
+  background-color: #330019;
   color:white;
   display: flex;
   align-items: center;
@@ -11,7 +11,7 @@ const Container = styled.div`
   flex-direction: column;
 `;
 const Title = styled.h1`
-  font-size: 70px;
+  font-size: 60px;
   margin-bottom: 20px;
 `;
 
