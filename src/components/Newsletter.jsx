@@ -2,8 +2,9 @@ import SendIcon from '@mui/icons-material/Send';
 import styled from "styled-components";
 
 const Container = styled.div`
-  height: 60vh;
-  background-color: #fcf5f5;
+  height: 50vh;
+  background-color: black;
+  color:white;
   display: flex;
   align-items: center;
   justify-content: center;
