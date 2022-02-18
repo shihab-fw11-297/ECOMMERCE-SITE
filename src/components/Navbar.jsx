@@ -94,7 +94,7 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>ECOM.</Logo>
+          <Logo>ECOM..</Logo>
         </Center>
         <Right>
           <MenuItem><b>REGISTER</b> </MenuItem> <PersonIcon />

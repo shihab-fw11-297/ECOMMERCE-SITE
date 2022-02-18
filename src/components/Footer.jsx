@@ -121,13 +121,13 @@ const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <RoomIcon style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
+          <RoomIcon style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336.
         </ContactItem>
         <ContactItem>
-          <PhoneIcon style={{marginRight:"10px"}}/> +1 234 56 78
+          <PhoneIcon style={{marginRight:"10px"}}/> +1 234 56 78 51
         </ContactItem>
         <ContactItem>
-          <MailOutlineOutlinedIcon style={{marginRight:"10px"}} /> contact@ecom.dev
+          <MailOutlineOutlinedIcon style={{marginRight:"10px"}} /> contact@ecom.com
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>
