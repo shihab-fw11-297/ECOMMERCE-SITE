@@ -1,12 +1,13 @@
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
+import { useSelector } from "react-redux";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { useSelector } from "react-redux";
+import { mobile } from "../responsive";
 import StripeCheckout from "react-stripe-checkout";
-import { useState,useEffect } from 'react';
+import { useEffect, useState } from "react";
 import { userRequest } from "../requestMethods";
 import { useHistory } from "react-router";
 
@@ -16,8 +17,8 @@ const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding: 20px;
+  ${mobile({ padding: "10px" })}
 `;
-
 
 const Title = styled.h1`
   font-weight: 300;
@@ -41,29 +42,29 @@ const TopButton = styled.button`
   color: ${(props) => props.type === "filled" && "white"};
 `;
 
-
+const TopTexts = styled.div`
+  ${mobile({ display: "none" })}
+`;
 const TopText = styled.span`
   text-decoration: underline;
   cursor: pointer;
   margin: 0px 10px;
-  font-weight:500;
 `;
-
 
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
-
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const Info = styled.div`
   flex: 3;
 `;
 
-
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const ProductDetail = styled.div`
@@ -81,7 +82,6 @@ const Details = styled.div`
   flex-direction: column;
   justify-content: space-around;
 `;
-
 
 const ProductName = styled.span``;
 
@@ -104,7 +104,6 @@ const PriceDetail = styled.div`
   justify-content: center;
 `;
 
-
 const ProductAmountContainer = styled.div`
   display: flex;
   align-items: center;
@@ -114,13 +113,14 @@ const ProductAmountContainer = styled.div`
 const ProductAmount = styled.div`
   font-size: 24px;
   margin: 5px;
+  ${mobile({ margin: "5px 15px" })}
 `;
 
 const ProductPrice = styled.div`
   font-size: 30px;
   font-weight: 200;
+  ${mobile({ marginBottom: "20px" })}
 `;
-
 
 const Hr = styled.hr`
   background-color: #eee;
@@ -133,7 +133,7 @@ const Summary = styled.div`
   border: 0.5px solid lightgray;
   border-radius: 10px;
   padding: 20px;
-  height: 55vh;
+  height: 50vh;
 `;
 
 const SummaryTitle = styled.h1`
@@ -147,8 +147,6 @@ const SummaryItem = styled.div`
   font-weight: ${(props) => props.type === "total" && "500"};
   font-size: ${(props) => props.type === "total" && "24px"};
 `;
-
-
 
 const SummaryItemText = styled.span``;
 
@@ -174,34 +172,32 @@ const Cart = () => {
   useEffect(() => {
     const makeRequest = async () => {
       try {
-        const res = await userRequest.post("/checkout/payment", {
+        const res = await userRequest.post("/checkout", {
           tokenId: stripeToken.id,
           amount: 500,
         });
         history.push("/success", {
-          stripeData: res.data,
-          products: cart, });
+          stripeData: res.data, });
       } catch {}
     };
     stripeToken && makeRequest();
   }, [stripeToken, cart.total, history]);
-
   return (
     <Container>
-       <Announcement />
-      <Navbar />     
+      <Navbar />
+      <Announcement />
       <Wrapper>
         <Title>YOUR BAG</Title>
         <Top>
           <TopButton>CONTINUE SHOPPING</TopButton>
-          <TopText>
+          <TopTexts>
             <TopText>Shopping Bag(2)</TopText>
             <TopText>Your Wishlist (0)</TopText>
-          </TopText>
+          </TopTexts>
           <TopButton type="filled">CHECKOUT NOW</TopButton>
         </Top>
         <Bottom>
-        <Info>
+          <Info>
             {cart.products.map((product) => (
               <Product>
                 <ProductDetail>
@@ -251,9 +247,8 @@ const Cart = () => {
               <SummaryItemText>Total</SummaryItemText>
               <SummaryItemPrice>$ {cart.total}</SummaryItemPrice>
             </SummaryItem>
-
             <StripeCheckout
-              name="Ecomm Shop"
+              name="Lama Shop"
               image="https://avatars.githubusercontent.com/u/1486366?v=4"
               billingAddress
               shippingAddress
@@ -262,7 +257,7 @@ const Cart = () => {
               token={onToken}
               stripeKey={KEY}
             >
-            <Button>CHECKOUT NOW</Button>
+              <Button>CHECKOUT NOW</Button>
             </StripeCheckout>
           </Summary>
         </Bottom>

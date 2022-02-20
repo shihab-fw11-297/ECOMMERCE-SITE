@@ -1,14 +1,14 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { popularProducts } from "../data";
 import Product from "./Product";
 import axios from "axios";
-import { useEffect, useState } from "react";
 
 const Container = styled.div`
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
 const Products = ({ cat, filters, sort }) => {
@@ -24,14 +24,14 @@ const Products = ({ cat, filters, sort }) => {
             : "http://localhost:5000/api/products"
         );
         setProducts(res.data);
-      } catch (err) { }
+      } catch (err) {}
     };
     getProducts();
   }, [cat]);
 
   useEffect(() => {
-    //feilter product if cat and setfielter category avalibles
-    cat && setFilteredProducts(
+    cat &&
+      setFilteredProducts(
         products.filter((item) =>
           Object.entries(filters).every(([key, value]) =>
             item[key].includes(value)

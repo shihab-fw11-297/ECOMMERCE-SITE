@@ -3,8 +3,6 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import React from "react";
 import styled from "styled-components";
 import SearchIcon from '@mui/icons-material/Search';
-import PersonIcon from '@mui/icons-material/Person';
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -103,8 +101,12 @@ const Navbar = () => {
         </Center>
         </Link>
         <Right>
-          <MenuItem><b>REGISTER</b> </MenuItem> <PersonIcon />
-          <MenuItem><b>SIGN IN</b></MenuItem><PersonOutlineIcon />
+        <Link to="/register">
+          <MenuItem><b>REGISTER</b> </MenuItem> 
+          </Link>
+          <Link to="/login">
+          <MenuItem><b>SIGN IN</b></MenuItem>
+          </Link>
           <Link to="/cart">
           <MenuItem>
             <Badge badgeContent={quantity} color="primary">
