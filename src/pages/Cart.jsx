@@ -1,18 +1,13 @@
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
+
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { mobile } from "../responsive";
-import StripeCheckout from "react-stripe-checkout";
-import { useEffect, useState } from "react";
-import { userRequest } from "../requestMethods";
-import { useHistory } from "react-router";
-
-const KEY = 'pk_test_51KS0NaSHlL1stz2LfSvl7EfqitjwzVJmQhsa6qBAgdGhVJzDHdwC1v4Zu5e0YJ4rWPEmqse89kk353HebJOJXoKS00blrTRvJx';
-
+import {ModalInFunctionalComponent} from "../components/Modal/Modal";
 const Container = styled.div``;
 
 const Wrapper = styled.div`
@@ -89,6 +84,7 @@ const ProductId = styled.span``;
 
 const ProductColor = styled.div`
   width: 20px;
+  margin-left:20px;
   height: 20px;
   border-radius: 50%;
   background-color: ${(props) => props.color};
@@ -148,6 +144,10 @@ const SummaryItem = styled.div`
   font-size: ${(props) => props.type === "total" && "24px"};
 `;
 
+const ProductColors = styled.div`
+    display: flex;
+`;
+
 const SummaryItemText = styled.span``;
 
 const SummaryItemPrice = styled.span``;
@@ -162,26 +162,7 @@ const Button = styled.button`
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
-  const [stripeToken, setStripeToken] = useState(null);
-  const history = useHistory();
 
-  const onToken = (token) => {
-    setStripeToken(token);
-  };
-
-  useEffect(() => {
-    const makeRequest = async () => {
-      try {
-        const res = await userRequest.post("/checkout", {
-          tokenId: stripeToken.id,
-          amount: 500,
-        });
-        history.push("/success", {
-          stripeData: res.data, });
-      } catch {}
-    };
-    stripeToken && makeRequest();
-  }, [stripeToken, cart.total, history]);
   return (
     <Container>
       <Navbar />
@@ -209,7 +190,9 @@ const Cart = () => {
                     <ProductId>
                       <b>ID:</b> {product._id}
                     </ProductId>
-                    <ProductColor color={product.color} />
+                    <ProductColors>
+                    <b>color:</b> <ProductColor color={product.color} />
+                    </ProductColors>
                     <ProductSize>
                       <b>Size:</b> {product.size}
                     </ProductSize>
@@ -247,18 +230,9 @@ const Cart = () => {
               <SummaryItemText>Total</SummaryItemText>
               <SummaryItemPrice>$ {cart.total}</SummaryItemPrice>
             </SummaryItem>
-            <StripeCheckout
-              name="Lama Shop"
-              image="https://avatars.githubusercontent.com/u/1486366?v=4"
-              billingAddress
-              shippingAddress
-              description={`Your total is $${cart.total}`}
-              amount={cart.total * 100}
-              token={onToken}
-              stripeKey={KEY}
-            >
-              <Button>CHECKOUT NOW</Button>
-            </StripeCheckout>
+            
+              <Button><ModalInFunctionalComponent price={cart.total}/></Button>
+           
           </Summary>
         </Bottom>
       </Wrapper>

@@ -3,10 +3,11 @@ import styled from "styled-components";
 import { login } from "../redux/apiCalls";
 import { mobile } from "../responsive";
 import { useDispatch, useSelector } from "react-redux";
-
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 60vh;
   background: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
@@ -79,6 +80,8 @@ const Login = () => {
     login(dispatch, { username, password });
   };
   return (
+    <>
+    <Navbar />
     <Container>
       <Wrapper>
         <Title>SIGN IN</Title>
@@ -101,6 +104,8 @@ const Login = () => {
         </Form>
       </Wrapper>
     </Container>
+     <Footer/>
+     </>
   );
 };
 

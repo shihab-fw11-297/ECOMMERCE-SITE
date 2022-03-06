@@ -15,28 +15,27 @@ const Container = styled.div`
   z-index: 200;
   background-color: white;
   border-bottom: 1px solid lightgray;
+ 
 `;
 
 const Wrapper = styled.div`
-  max-width: 72rem;
+
+  max-width: 90rem;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 1.55rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 `;
 
 const Left = styled.div`
-  flex: 1;
   display: flex;
   align-items: center;
   cursor: pointer;
-`;
-
-const Language = styled.span`
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
+  width:200px;
+  margin-left:50px;
+  margin-right:200px;
 `;
 
 const SearchContainer = styled.div`
@@ -44,7 +43,7 @@ const SearchContainer = styled.div`
   align-items: center;
   border: 1px solid lightgray;
   padding: 0.25rem;
-  margin-left:5px;
+  margin-left:10px;
 `;
 
 const Input = styled.input`
@@ -56,8 +55,10 @@ const Input = styled.input`
 
 
 const Center = styled.div`
-  flex: 1;
+  flex: 2;
+  display: flex;
   text-align: center;
+ 
 `;
 
 const Logo = styled.h1`
@@ -75,6 +76,7 @@ const Right = styled.div`
 
 const MenuItem = styled.div`
   font-size: 1rem;
+  display: flex;
   cursor: pointer;
   text-transform: uppercase;
   margin-left: 15px;
@@ -82,38 +84,65 @@ const MenuItem = styled.div`
   margin-top:3px;
 `;
 
+const MenuItems = styled.h3`
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-left: 16px;
+  margin-right:2px;
+`;
 const Navbar = () => {
   const quantity = useSelector(state=>state.cart.quantity)
+  let user = useSelector((state) => state.user.currentUser);
+
+  const signOut = () =>{
+    localStorage.removeItem('persist:root')
+    window.location.reload(false);
+  }
 
   return (
     <Container>
       <Wrapper>
         <Left>
-          <Language><b>EN</b></Language>
+        <Link to="/">
+        <Logo>ECOM..</Logo>
+        </Link>
+        </Left>
+       
+        <Center>
+        <MenuItems>MEN</MenuItems>
+        <MenuItems>WOMAN</MenuItems>
+        <MenuItems>CHILDREN</MenuItems>
+        <MenuItems>NEW ARRIVALS</MenuItems>
+        <MenuItems>CLEARANCE</MenuItems>
+        </Center>
+      
+        <Right>
+                    {
+                        user ? (
+                            <MenuItem onClick={() => signOut()}><b>Sign out</b></MenuItem>
+                        ) : (
+                            <>
+                                 <Link to="/login"> <MenuItem><b>Login</b></MenuItem></Link>
+                                <Link to="/register"><MenuItem><b>Register</b></MenuItem></Link>
+                            </>
+                        )
+                    }
+       
+          
+          <MenuItem>
+          <Link to="/cart">
+            <Badge badgeContent={quantity} color="primary">
+              <ShoppingCartIcon />
+            </Badge>
+            </Link>
           <SearchContainer>
             <Input placeholder="Search" />
             <SearchIcon style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
-        </Left>
-        <Link to="/">
-        <Center>
-          <Logo>ECOM..</Logo>
-        </Center>
-        </Link>
-        <Right>
-        <Link to="/register">
-          <MenuItem><b>REGISTER</b> </MenuItem> 
-          </Link>
-          <Link to="/login">
-          <MenuItem><b>SIGN IN</b></MenuItem>
-          </Link>
-          <Link to="/cart">
-          <MenuItem>
-            <Badge badgeContent={quantity} color="primary">
-              <ShoppingCartIcon />
-            </Badge>
+
           </MenuItem>
-          </Link>
+         
         </Right>
       </Wrapper>
     </Container>

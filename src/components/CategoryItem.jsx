@@ -7,6 +7,8 @@ const Container = styled.div`
   margin: 3px;
   height: 70vh;
   position: relative;
+  margin-top:-70px;
+  transition: all 0.5s ease;
 `;
 
 const Image = styled.img`
@@ -14,7 +16,7 @@ const Image = styled.img`
   height: 100%;
   object-fit: cover;
   ${mobile({ height: "20vh" })}
-
+  opacity:1;
 `;
 
 const Info = styled.div`
@@ -31,6 +33,7 @@ const Info = styled.div`
 
 const Title = styled.h1`
     color:white;
+    font-weight:600;
     margin-bottom: 20px;
 `;
 

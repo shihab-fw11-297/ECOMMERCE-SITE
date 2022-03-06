@@ -1,22 +1,22 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw926c16be/67638786_007_main.jpg?sw=2000&sh=2000&sm=fit&sfrm=jpg",
-      title: "Winter SALE",
+      img: "https://static.fibre2fashion.com/articleresources/images/80/7944/Clothes-Maketh-a-Man_small_Small.jpg",
+      title: "Winter Man Fashion SALE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "f5fafd",
     },
     {
       id: 2,
-      img: "https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw6a125bce/80548458_800_main.jpg?sw=2000&sh=2000&sm=fit&sfrm=jpg",
-      title: "AUTUMN COLLECTION",
+      img: "https://www.lux-review.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2021/10/Autumn-Winter-Fashion-1536x864.jpg.webp",
+      title: "AUTUMN NEW COLLECTION",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "fcf1ed",
     },
     {
       id: 3,
-      img: "https://i.ibb.co/cXFnLLV/3.png",
-      title: "LOUNGEWEAR LOVE",
+      img: "https://us.123rf.com/450wm/alenkasm/alenkasm1610/alenkasm161000004/63833742-group-of-fashion-children-wearing-denim-clothing-having-fun-on-the-sea-shore-autumn-casual-outfit-in.jpg?ver=6",
+      title: "Children Outlook Collection",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "fbf0f4",
     },
@@ -25,20 +25,20 @@ export const sliderItems = [
   export const categories = [
     {
       id: 1,
-      img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "SHIRT STYLE!",
-      cat:"woman"
-    },
-    {
-      id: 2,
-      img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "LOUNGEWEAR LOVE",
+      img: "https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwe3f82a4b/images/homepage/2020/060420/GUYS%20SHORTS%20PHOTO@2x.jpg",
+      title: "MAN NEW COLLECTION",
       cat:"man"
     },
     {
+      id: 2,
+      img: "https://centralandme.com/wp-content/uploads/2018/08/class-apart-1.jpg",
+      title: "WOMAN NEW COLLECTION",
+      cat:"woman"
+    },
+    {
       id: 3,
-      img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      title: "LIGHT JACKETS",
+      img: "https://media.istockphoto.com/photos/child-boy-modern-stock-photo-picture-id1296361252?b=1&k=20&m=1296361252&s=170667a&w=0&h=4SZXoxCb-tq_pUk8X04vaMdT4H91Qk1MYbN9iXvUV2g=",
+      title: "CHILDREN NEW COLLECTION",
       cat:"woman"
     },
   ];

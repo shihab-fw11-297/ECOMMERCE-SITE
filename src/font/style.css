@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Visuelt Pro ';
+    src: local('Visuelt Pro  Regular'), local('Visuelt-Pro--Regular'),
+        url('VisueltPro-Regular.woff2') format('woff2'),
+        url('VisueltPro-Regular.woff') format('woff'),
+        url('VisueltPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
