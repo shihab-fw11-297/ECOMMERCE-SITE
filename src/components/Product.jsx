@@ -3,6 +3,7 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { useEffect } from 'react';
 
 const Info = styled.div`
   opacity: 0;
@@ -65,6 +66,11 @@ const Icon = styled.div`
 `;
 
 const Product = ({ item }) => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <Container>
       <Circle />

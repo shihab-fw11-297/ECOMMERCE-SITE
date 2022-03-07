@@ -42,6 +42,9 @@ const Input = styled.input`
   min-width: 40%;
   margin: 10px 0;
   padding: 10px;
+  font-size: 15px;
+  font-family:'Quicksand-Regular';
+  font-weight: 550;
 `;
 
 const Button = styled.button`

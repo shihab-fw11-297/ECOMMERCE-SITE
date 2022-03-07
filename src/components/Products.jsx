@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { popularProducts } from "../data";
 import Product from "./Product";
 import axios from "axios";
 
@@ -40,6 +39,10 @@ const Products = ({ cat, filters, sort }) => {
       );
   }, [products, cat, filters]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   useEffect(() => {
     if (sort === "newest") {
       setFilteredProducts((prev) =>

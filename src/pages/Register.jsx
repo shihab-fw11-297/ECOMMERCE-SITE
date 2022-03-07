@@ -41,6 +41,9 @@ const Input = styled.input`
   min-width: 40%;
   margin: 20px 10px 0px 0px;
   padding: 10px;
+  font-size: 17px;
+  font-family:'Quicksand-Regular';
+  font-weight: 550;
 `;
 
 const Agreement = styled.span`

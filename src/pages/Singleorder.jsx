@@ -56,7 +56,10 @@ const Title = styled.h1`
 
 const ProductName = styled.span``;
 
-const ProductId = styled.span``;
+const ProductId = styled.span`
+font-size: 15px;
+font-family:'Quicksand-Regular';
+`;
 
 
 

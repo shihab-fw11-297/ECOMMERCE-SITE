@@ -76,7 +76,10 @@ const Title1 = styled.h4`
 `;
 
 
-const ProductName = styled.span``;
+const ProductName = styled.span`
+  font-size: 18px;
+  font-family:'Quicksand-Regular';
+`;
 
 const ProductId = styled.span``;
 

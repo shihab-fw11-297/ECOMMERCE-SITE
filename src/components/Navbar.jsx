@@ -2,9 +2,9 @@ import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import React from "react";
 import styled from "styled-components";
-import SearchIcon from '@mui/icons-material/Search';
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Menu from './Modal/images/menu.svg';
 
 const Container = styled.div`
   padding: 0rem 0;
@@ -38,20 +38,14 @@ const Left = styled.div`
   margin-right:200px;
 `;
 
-const SearchContainer = styled.div`
-  display: flex;
-  align-items: center;
-  border: 1px solid lightgray;
-  padding: 0.25rem;
-  margin-left:10px;
-`;
-
-const Input = styled.input`
-  border: none;
-  &:focus {
-    outline: none;
-}
-`;
+// const SearchContainer = styled.div`
+//   display: flex;
+//   align-items: center;
+//   border: 1px solid lightgray;
+//   padding: 0.1rem;
+//   margin-left:10px;
+//   margin-top:-3px;
+// `;
 
 
 const Center = styled.div`
@@ -84,6 +78,11 @@ const MenuItem = styled.div`
   margin-top:3px;
 `;
 
+const Image = styled.img`
+  width:25px;
+  height:25px
+`;
+
 const MenuItems = styled.h3`
   font-size: 1rem;
   cursor: pointer;
@@ -92,10 +91,10 @@ const MenuItems = styled.h3`
   margin-right:2px;
 `;
 const Navbar = () => {
-  const quantity = useSelector(state=>state.cart.quantity)
+  const quantity = useSelector(state => state.cart.quantity)
   let user = useSelector((state) => state.user.currentUser);
 
-  const signOut = () =>{
+  const signOut = () => {
     localStorage.removeItem('persist:root')
     window.location.reload(false);
   }
@@ -104,45 +103,43 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-        <Link to="/">
-        <Logo>ECOM..</Logo>
-        </Link>
+          <Link to="/">
+            <Logo>ECOM..</Logo>
+          </Link>
         </Left>
-       
-        <Center>
-        <MenuItems>MEN</MenuItems>
-        <MenuItems>WOMAN</MenuItems>
-        <MenuItems>CHILDREN</MenuItems>
-        <MenuItems>NEW ARRIVALS</MenuItems>
-        <MenuItems>CLEARANCE</MenuItems>
-        </Center>
-      
-        <Right>
-                    {
-                        user ? (
-                            <MenuItem onClick={() => signOut()}><b>Sign out</b></MenuItem>
-                        ) : (
-                            <>
-                                 <Link to="/login"> <MenuItem><b>Login</b></MenuItem></Link>
-                                <Link to="/register"><MenuItem><b>Register</b></MenuItem></Link>
-                            </>
-                        )
-                    }
-       
-          
-          <MenuItem>
-          <Link to="/cart">
-            <Badge badgeContent={quantity} color="primary">
-              <ShoppingCartIcon />
-            </Badge>
-            </Link>
-          <SearchContainer>
-            <Input placeholder="Search" />
-            <SearchIcon style={{ color: "gray", fontSize: 16 }} />
-          </SearchContainer>
 
+        <Center>
+          <MenuItems>MEN</MenuItems>
+          <MenuItems>WOMAN</MenuItems>
+          <MenuItems>CHILDREN</MenuItems>
+          <MenuItems>NEW ARRIVALS</MenuItems>
+          <MenuItems>CLEARANCE</MenuItems>
+        </Center>
+
+        <Right>
+          {
+            user ? (
+              <>
+              <MenuItem onClick={() => signOut()}><b>Sign out</b></MenuItem>
+              <Link to="/success"> <MenuItem><b>Orders</b></MenuItem></Link>
+              </>
+            ) : (
+              <>
+                <Link to="/login"> <MenuItem><b>Login</b></MenuItem></Link>
+                <Link to="/register"><MenuItem><b>Register</b></MenuItem></Link>
+              </>
+            )
+          }
+
+
+          <MenuItem>
+            <Link to="/cart">
+              <Badge badgeContent={quantity} color="primary">
+                <ShoppingCartIcon />
+              </Badge>
+            </Link>
           </MenuItem>
-         
+
         </Right>
       </Wrapper>
     </Container>
