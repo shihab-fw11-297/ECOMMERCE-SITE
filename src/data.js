@@ -39,7 +39,7 @@ export const sliderItems = [
       id: 3,
       img: "https://media.istockphoto.com/photos/child-boy-modern-stock-photo-picture-id1296361252?b=1&k=20&m=1296361252&s=170667a&w=0&h=4SZXoxCb-tq_pUk8X04vaMdT4H91Qk1MYbN9iXvUV2g=",
       title: "CHILDREN NEW COLLECTION",
-      cat:"woman"
+      cat:"children"
     },
   ];
 

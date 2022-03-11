@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3be8f081.css",
+    "main.js": "/static/js/main.f258a1a9.js",
+    "static/media/user.png": "/static/media/user.44ea40a3eb8dd7fed2a9.png",
+    "static/media/search.png": "/static/media/search.7b0cdb2339bf6c0f39cc.png",
+    "static/media/heart.png": "/static/media/heart.effe69b900a09fd31cb3.png",
+    "static/media/bajaj.svg": "/static/media/bajaj.0cc9399e1f88432ea5dfb498d0a2d3ac.svg",
+    "static/media/Paytm.svg": "/static/media/Paytm.65a82a2fc6a0c46a787e885433be8151.svg",
+    "static/media/amazonpay.svg": "/static/media/amazonpay.911743733715bcb79b0ee1f509c2e1a7.svg",
+    "static/media/wallet.svg": "/static/media/wallet.5bf7c07e5c693989dfd55a205a230c5c.svg",
+    "index.html": "/index.html",
+    "static/media/debit.svg": "/static/media/debit.c90aec2f22e4d7afbdff918ebf0bb8be.svg",
+    "static/media/cross.svg": "/static/media/cross.151b1fb296eddbdf1fe3e95b6d53cf7a.svg",
+    "static/media/bank.svg": "/static/media/bank.348c1635bf6f104250e60920dfd627aa.svg",
+    "main.3be8f081.css.map": "/static/css/main.3be8f081.css.map",
+    "main.f258a1a9.js.map": "/static/js/main.f258a1a9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3be8f081.css",
+    "static/js/main.f258a1a9.js"
+  ]
+}

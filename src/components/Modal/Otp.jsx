@@ -10,10 +10,10 @@ export const Otp = () => {
   const currentUser = useSelector((state) => state.user);
   const history = useHistory();
   const dispatch = useDispatch();
-  
+ 
     const createOrder = async () => {
       try {
-        await axios.post("http://localhost:5000/api/orders", {
+        await axios.post("https://heroku-apis.herokuapp.com/api/orders", {
           userId: currentUser.currentUser._id,
           products: cart.products.map((item) => ({
             productId: item._id,
@@ -23,7 +23,7 @@ export const Otp = () => {
             price:item.price,
           })),
           amount: cart.total,
-          address:"ssssss"
+          address:currentUser.currentUser.address
         });
         dispatch(clearProduct("sucsess"));
         history.push("/success");

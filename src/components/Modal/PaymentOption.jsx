@@ -16,7 +16,6 @@ export const PaymentOption = ({changeStatus,price}) => {
         changeStatus(false)
     }
 
-    console.log(price);
 
   return (
     <div id="payment-options">

@@ -1,10 +1,13 @@
-import Product from "./pages/Product";
-import Home from "./pages/Home";
-import ProductList from "./pages/ProductList";
-import Register from "./pages/Register";
-import Login from "./pages/Login";
-import Cart from "./pages/Cart";
-import Singleorder from './pages/Singleorder';
+import Product from "./pages/Product/Product";
+import Home from "./pages/Home/Home";
+import ProductList from "./pages/ProductList/ProductList";
+import Register from "./pages/Register/Register";
+import Login from "./pages/Login/Login";
+import Cart from "./pages/Cart/Cart";
+import Singleorder from './pages/Singleorder/Singleorder';
+import Success from './pages/Success/Success';
+import { useSelector } from "react-redux";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,8 +15,7 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import Success from './pages/Success';
-import { useSelector } from "react-redux";
+
 
 const App = () => {
   const user = useSelector((state) => state.user.currentUser);
