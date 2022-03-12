@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Ecommerce website clone
+----------------------------------------
+Ecommerce Website clone Where user can buy Men, Women and Children casual apparel and accessories.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features Implement in This Project 
+------------------------------------------
+1. User can Sign in / Sign up (design a authentication framework)
+2. User can see list of prduct based on Categories Like Men,Women,Children
+3. user can see full Details of products Like Color,Size,clearance Product,New Arrival etc.
+4. User can add product in cart and buy products
+5. user can see full details about Order and also provide cancellation service
 
-## Available Scripts
+## Installation
+-------------------------
+1. download zip file and extract in system
+2. Run this command in your terminal: npm install
+3. In the project directory, you can run: npm start
 
-In the project directory, you can run:
 
-### `npm start`
+## Technologies that we used :-
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. React.js
+2. Redux
+3. Styled components
+4. MongoDB
+5. Express.js
+6. NodeJs
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Index Page
+-------------------------
 
-### `npm test`
+![Index-page](https://github.com/shihab-fw11-297/ECOMMERCE-SITE/blob/main/1.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Product List Page
+-------------------------
 
-### `npm run build`
+![Product-List-page](https://github.com/shihab-fw11-297/ECOMMERCE-SITE/blob/main/2.gif)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Product Page
+-------------------------
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Index-page](https://github.com/shihab-fw11-297/ECOMMERCE-SITE/blob/main/4.gif)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Cart Page
+-------------------------
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![cart-page](https://github.com/shihab-fw11-297/ECOMMERCE-SITE/blob/main/3.gif)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Authentication Page
+-------------------------
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Authentication-page](https://github.com/shihab-fw11-297/ECOMMERCE-SITE/blob/main/6.gif)
 
-## Learn More
+### Order Page
+-------------------------
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Authentication-page](https://github.com/shihab-fw11-297/ECOMMERCE-SITE/blob/main/5.gif)
